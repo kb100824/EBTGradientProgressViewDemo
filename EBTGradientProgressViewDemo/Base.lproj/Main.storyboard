@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KjJ-La-fLf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-5a-QGw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="emj-GN-t0v"/>
+                                </connections>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MR1-mF-AUv">
+                                <rect key="frame" x="0.0" y="552" width="375" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-Ac-ymB">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="51"/>
+                                        <state key="normal" title="跳转">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9d-T5-I0g"/>
+                                            <segue destination="ubn-Wh-V6r" kind="show" id="XS6-TY-4Jg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-1r-40s">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="51"/>
+                                        <state key="normal" title="开始动画">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ic-IL-KIz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="mbd-Ac-ymB" firstAttribute="height" secondItem="Mev-1r-40s" secondAttribute="height" id="0mJ-d3-AoZ"/>
+                                    <constraint firstItem="mbd-Ac-ymB" firstAttribute="top" secondItem="MR1-mF-AUv" secondAttribute="top" id="67N-QF-f9I"/>
+                                    <constraint firstAttribute="height" constant="51" id="FdX-pg-ewH"/>
+                                    <constraint firstAttribute="trailing" secondItem="mbd-Ac-ymB" secondAttribute="trailing" id="amh-1X-q8p"/>
+                                    <constraint firstAttribute="bottom" secondItem="mbd-Ac-ymB" secondAttribute="bottom" id="cGr-fZ-iUL"/>
+                                    <constraint firstItem="mbd-Ac-ymB" firstAttribute="leading" secondItem="Mev-1r-40s" secondAttribute="trailing" constant="125" id="cNy-4L-YnP"/>
+                                    <constraint firstItem="mbd-Ac-ymB" firstAttribute="width" secondItem="Mev-1r-40s" secondAttribute="width" id="ilh-dO-zQU"/>
+                                    <constraint firstItem="Mev-1r-40s" firstAttribute="top" secondItem="MR1-mF-AUv" secondAttribute="top" id="rYQ-t8-ob2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mev-1r-40s" secondAttribute="bottom" id="uel-r9-ce1"/>
+                                    <constraint firstItem="Mev-1r-40s" firstAttribute="leading" secondItem="MR1-mF-AUv" secondAttribute="leading" id="xCe-7z-Bp4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6705882353" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MR1-mF-AUv" secondAttribute="bottom" id="KZG-rR-3Ju"/>
+                            <constraint firstAttribute="trailing" secondItem="SFe-5a-QGw" secondAttribute="trailing" id="LFZ-ye-7Je"/>
+                            <constraint firstItem="SFe-5a-QGw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NY6-yv-G2b"/>
+                            <constraint firstItem="MR1-mF-AUv" firstAttribute="top" secondItem="SFe-5a-QGw" secondAttribute="bottom" id="b2b-XP-jYX"/>
+                            <constraint firstItem="SFe-5a-QGw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qqG-Q1-K1D"/>
+                            <constraint firstItem="MR1-mF-AUv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="seJ-Sz-cRd"/>
+                            <constraint firstAttribute="trailing" secondItem="MR1-mF-AUv" secondAttribute="trailing" id="wz6-fo-T14"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AFo-1H-qcV"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="SFe-5a-QGw" id="9cG-kz-4ie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="123.68815592203899"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="mCz-Sr-hx7">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="ubn-Wh-V6r" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5qw-st-yZT"/>
+                        <viewControllerLayoutGuide type="bottom" id="eKD-4b-KCi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bTs-ug-SGp">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kc3-RG-4nE" customClass="EBTWebViewWithGradientProgressView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="569"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMG-ih-XMF">
+                                <rect key="frame" x="0.0" y="569" width="187.5" height="34"/>
+                                <color key="backgroundColor" red="0.60449170070000002" green="0.56540478220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="webview添加进度条">
+                                    <color key="titleColor" red="1" green="0.1174036119" blue="0.26548892559999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadBtn:" destination="ubn-Wh-V6r" eventType="touchUpInside" id="7KY-XA-PeK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-kb-o0f">
+                                <rect key="frame" x="187.5" y="569" width="187.5" height="34"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" red="1" green="0.1174036119" blue="0.26548892559999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBack:" destination="ubn-Wh-V6r" eventType="touchUpInside" id="udK-bD-tu3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Kc3-RG-4nE" secondAttribute="trailing" id="0nC-Vz-hWl"/>
+                            <constraint firstItem="OmN-kb-o0f" firstAttribute="width" secondItem="pMG-ih-XMF" secondAttribute="width" id="7yQ-xX-AFc"/>
+                            <constraint firstItem="eKD-4b-KCi" firstAttribute="top" secondItem="pMG-ih-XMF" secondAttribute="bottom" id="C3A-j2-vPN"/>
+                            <constraint firstItem="Kc3-RG-4nE" firstAttribute="leading" secondItem="bTs-ug-SGp" secondAttribute="leading" id="EIZ-Dl-LIg"/>
+                            <constraint firstItem="OmN-kb-o0f" firstAttribute="leading" secondItem="pMG-ih-XMF" secondAttribute="trailing" id="Qad-4L-d3R"/>
+                            <constraint firstAttribute="trailing" secondItem="OmN-kb-o0f" secondAttribute="trailing" id="bTv-G7-sMj"/>
+                            <constraint firstItem="OmN-kb-o0f" firstAttribute="height" secondItem="pMG-ih-XMF" secondAttribute="height" id="d5e-9t-Nq4"/>
+                            <constraint firstItem="pMG-ih-XMF" firstAttribute="leading" secondItem="bTs-ug-SGp" secondAttribute="leading" id="djx-GT-6OX"/>
+                            <constraint firstItem="Kc3-RG-4nE" firstAttribute="top" secondItem="5qw-st-yZT" secondAttribute="bottom" id="eVz-yn-601"/>
+                            <constraint firstItem="eKD-4b-KCi" firstAttribute="top" secondItem="OmN-kb-o0f" secondAttribute="bottom" id="f50-YR-SY5"/>
+                            <constraint firstItem="OmN-kb-o0f" firstAttribute="top" secondItem="Kc3-RG-4nE" secondAttribute="bottom" id="wrb-F0-A5m"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="Kc3-RG-4nE" id="jeW-4T-Izs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCZ-Zg-l85" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975.2" y="16.641679160419791"/>
+        </scene>
+        <!--直接用EBTGradientProgressView添加进度条-->
+        <scene sceneID="tiQ-1h-zQq">
+            <objects>
+                <navigationController title="直接用EBTGradientProgressView添加进度条" automaticallyAdjustsScrollViewInsets="NO" id="KjJ-La-fLf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="e2i-dc-WZg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jbM-nC-nz4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zpa-Ce-3yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="777.66116941529242"/>
+        </scene>
+    </scenes>
+</document>
