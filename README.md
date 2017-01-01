@@ -1,7 +1,9 @@
 
 #通过两种方法为webview添加渐变进度条
 
-#首先把文件夹名称“EBTGradientProgressView”里面的四个文件添加到项目中。
+#使用pod指令把类库添加项目中:
+
+    pod 'EBTWebViewWithGradientProgress', '~> 1.0.0'
 
 #方法1: 直接引用EBTGradientProgressView这个类库来实现
 
