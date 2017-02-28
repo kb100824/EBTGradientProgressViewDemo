@@ -8,11 +8,11 @@
 #方法1: 直接引用EBTGradientProgressView这个类库来实现
 
 @property(nonatomic,assign) CGFloat progressValue;
-
+```
 - (void)startAnimating;
 
 - (void)stopAnimating;
-
+```
 #方法2:
  直接引用用EBTWebViewWithGradientProgressView这个类库来实现，XIB或者SB的话需要将Webview的Class设置为"EBTWebViewWithGradientProgressView"就可以。
 
